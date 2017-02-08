@@ -1,3 +1,2 @@
 #!/bin/bash
-
-gcc $CFILE -o $CFILE.s
+gcc -o masm=intel $CFILE
