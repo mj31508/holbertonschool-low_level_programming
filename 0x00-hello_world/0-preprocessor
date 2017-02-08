@@ -1,0 +1,9 @@
+#!/bin/bash
+
+/**
+* main -compiling a program
+*
+* Return: none
+*/
+
+gcc -E $CFILE -o c
