@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd>
 
-/*
- *main - void
+/**
+ *main - write to standard error and returns 1
  *
  *Return: 1
  */
