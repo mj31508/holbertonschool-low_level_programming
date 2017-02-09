@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd>
+#include <unistd.h>
 
 /**
  *main - write to standard error and returns 1
@@ -8,7 +8,7 @@
  */
 	int main(void)
 {
-	write(2, "and that piece of art is useful\n - Dora Korpar, 2015-10-19", 58);
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 
 }
