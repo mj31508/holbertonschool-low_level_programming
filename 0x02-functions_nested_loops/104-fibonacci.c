@@ -1,28 +1,49 @@
 #include <stdio.h>
+#include "holberton.h"
+
+#define CUT 10000000
 
 /**
- * main - Print first 50 Fibonacci numbers
- *
- * Return: Return 0
+ * main - entry point display fibonacci sequence up to 98th value
+ * I cut my numbers arbitraryly at 10000000 and deal with 2 numbers instead of
+ * one, the front par and the back part
+ * Return: 0
  */
 int main(void)
 {
-	long int f, s, sum, tot;
+	int i, r;
+	long int tmp0front, tmp1front, tmp2front, tmp0back, tmp1back, tmp2back;
 
-	sum = 0;
-	f = 0;
-	s = 1;
-	tot = 0;
-	while (sum < 4000000)
+	i = 2;
+	tmp0back = 1;
+	tmp1back = 2;
+	tmp0front = 0;
+	tmp1front = 0;
+	r = 0;
+	printf("%li, %li, ", tmp0back, tmp1back);
+	while (i < 98)
 	{
-		sum = f + s;
-		if (sum % 2 == 0)
+		tmp2back = tmp0back + tmp1back;
+		if ((tmp2back / CUT) > 0)
 		{
-			tot += sum;
+			r = tmp2back / CUT;
+			tmp2back = tmp2back % CUT;
 		}
-		f = s;
-		s = sum;
+		tmp2front = tmp0front + tmp1front + r;
+		if (tmp2front > 0)
+			printf("%li%07li", tmp2front, tmp2back);
+		else
+			printf("%li", tmp2back);
+		tmp0front = tmp1front;
+		tmp1front = tmp2front;
+		tmp0back = tmp1back;
+		tmp1back = tmp2back;
+		r = 0;
+		if (i < 97)
+			printf(", ");
+		i++;
 	}
-	printf("%ld\n", tot);
+	printf("\n");
+
 	return (0);
 }
