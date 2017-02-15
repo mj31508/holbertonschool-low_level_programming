@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - void prototype
+ * print_alphabet_x10 - void prototype
  *
  * Return: Always 0.
  */
