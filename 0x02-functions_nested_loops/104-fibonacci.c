@@ -1,42 +1,45 @@
 #include <stdio.h>
+
 /**
- * main - print a table of the first 178 fibonacci numbers.
- * Return: Nothing.
+ * main - print the first 98 Fibonacci numbers
+ *
+ * Return: 0
  */
+
 int main(void)
 {
-	int count;
-	unsigned long i, j, k;
-	unsigned long ia, ib, ja, jb, ka, kb, carry;
-	unsigned long amount;
+	long i, ms, mb, ns, nb, oldns, oldnb, zerocount;
 
-	count = 0;
-	i = 0;
-	j = 1;
-	amount = 10000000000000000000;/*10^18*/
-	for (count = 1; count <= 91; count++)
+	ns = 2;
+	ms = 1;
+	nb = ns - ns;
+	mb = ms - ms;
+	printf("%ld, %ld, ", ms, ns);
+	for (i = ns + ms; i <= 98; i++)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		printf("%d %lu\n", count + 1, k);
+		ns = ns + ms;
+		ms = ns - ms;
+		if (ns / 1000000000 > 0)
+		{
+			nb++;
+			ns = ns % 1000000000;
+		}
+		nb = nb + mb;
+		mb = nb - mb;
+		if (nb)
+		{
+			printf("%ld", nb);
+			zerocount = ns;
+			while (zerocount < 100000000)
+			{
+				printf("0");
+				zerocount *= 10;
+			}
+		}
+		printf("%ld", ns);
+		if (i < 98)
+			printf(", ");
 	}
-	ia = i / amount;
-	ib = i % amount;
-	ja = j / amount;
-	jb = j % amount;
-	while (count <= 178)
-	{
-		carry = (ib + jb) / amount;
-		ka = (ia + ja) + carry;
-		kb = (ib + jb ) - carry * amount;
-		ia = ja;
-		ib = jb;
-		ja = ka;
-		jb = kb;
-		printf("%d %lu%018lu\n", count + 1, ka, kb);
-		count++;
-	}
-	printf("%lu018", ka);
+	printf("\n");
 	return (0);
 }
