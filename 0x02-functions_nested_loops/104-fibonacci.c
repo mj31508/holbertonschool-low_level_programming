@@ -1,45 +1,80 @@
 #include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - print the first 98 Fibonacci numbers
+ * main - prints first 97 fibonacci numbers
  *
- * Return: 0
+ * Description: At the 89th number, switches to uses two
+ * variables, to hold first handful of digits and last digits.
+ *
+ * Return: returns zero
  */
-
 int main(void)
 {
-	long i, ms, mb, ns, nb, oldns, oldnb, zerocount;
+	unsigned long int i, l, f;
+	int ii, ll, ff, c;
 
-	ns = 2;
-	ms = 1;
-	nb = ns - ns;
-	mb = ms - ms;
-	printf("%ld, %ld, ", ms, ns);
-	for (i = ns + ms; i <= 98; i++)
+	i = c = 1;
+	l = 2;
+	f = 3;
+
+	printf("%lu, %lu, ", i, l);
+	for (c = 0; c < 95; c++)
 	{
-		ns = ns + ms;
-		ms = ns - ms;
-		if (ns / 1000000000 > 0)
+		if (c >= 88)
 		{
-			nb++;
-			ns = ns % 1000000000;
+			ff += chop(f, 18);
+			f %= _llpow(10, 18);
+			printf("%d", ff);
+			ii = ll;
+			ll = ff;
+			ff = ii + ll;
 		}
-		nb = nb + mb;
-		mb = nb - mb;
-		if (nb)
-		{
-			printf("%ld", nb);
-			zerocount = ns;
-			while (zerocount < 100000000)
-			{
-				printf("0");
-				zerocount *= 10;
-			}
-		}
-		printf("%ld", ns);
-		if (i < 98)
+		printf("%lu", f);
+		if (c != 94)
 			printf(", ");
+		i = l;
+		l = f;
+		f = l + i;
 	}
 	printf("\n");
 	return (0);
+}
+
+
+/**
+ * chop - Cuts integer down to specific decimal place.
+ *
+ * Description: Divides num by a specific power of ten.
+ * @num: number to chop down
+ * @times: times to chop it down
+ * Return: Returns digits left after division.
+ */
+unsigned long int chop(unsigned long int num, int times)
+{
+	return (num / _llpow(10, times));
+}
+
+
+/**
+ * _llpow - Quick pow implementation.
+ *
+ * Description: Multiples number by itself a number of times
+ * designated by the exponent.
+ *
+ * @base: base number
+ * @exponent: exponent, number of times to multiply base by itself
+ * Return: returns zero
+ */
+unsigned long int _llpow(int base, int exponent)
+{
+	unsigned long int val = 1;
+
+	while (exponent > 0)
+	{
+		val *= base;
+		exponent--;
+	}
+	return (val);
+
 }
