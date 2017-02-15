@@ -2,7 +2,7 @@
 
 
 /**
- * main - prototype has a void parameter
+ * print_alphabet - prototype has a void parameter
  *
  * Return: Always 0.
  */
