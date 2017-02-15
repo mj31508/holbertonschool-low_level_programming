@@ -1,19 +1,19 @@
 #include <stdio.h>
 /**
- * main - fibonacci numbers.
+ * main - print a table of the first 178 fibonacci numbers.
  * Return: Nothing.
  */
 int main(void)
 {
 	int count;
 	unsigned long i, j, k;
-	unsigned long ia, ib, ja, jb, ka, kb, take;
-	unsigned long total;
+	unsigned long ia, ib, ja, jb, ka, kb, carry;
+	unsigned long amount;
 
 	count = 0;
 	i = 0;
 	j = 1;
-	amount = 10000000000000000000;
+	amount = 10000000000000000000;/*10^18*/
 	for (count = 1; count <= 91; count++)
 	{
 		k = i + j;
@@ -21,15 +21,15 @@ int main(void)
 		j = k;
 		printf("%d %lu\n", count + 1, k);
 	}
-	ia = i / total;
-	ib = i % total;
-	ja = j / total;
-	jb = j % total;
+	ia = i / amount;
+	ib = i % amount;
+	ja = j / amount;
+	jb = j % amount;
 	while (count <= 178)
 	{
-		take= (ib + jb) / total;
-		ka = (ia + ja) + take;
-		kb = (ib + jb ) - take * total;
+		carry = (ib + jb) / amount;
+		ka = (ia + ja) + carry;
+		kb = (ib + jb ) - carry * amount;
 		ia = ja;
 		ib = jb;
 		ja = ka;
