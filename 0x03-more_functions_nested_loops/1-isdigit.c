@@ -6,7 +6,6 @@
  *
  * Return: 1 if variable is a digit or zero if it isn't
  **/
-
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
