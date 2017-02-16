@@ -2,7 +2,7 @@
 
 /**
  * _isupper - Funtion prototype to check if character is upper case
- *@c -  The argument that is going to be checked
+ *@c:  The argument that is going to be checked
  * Return: Always 0.
  */
 
