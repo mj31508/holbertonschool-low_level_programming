@@ -4,11 +4,12 @@
  * print_numbers - print numbers from 0 to 9
  *
  *
- */
+ **/
 
 void print_numbers(void)
 {
-       char i = '0';
+	char i;
+	i = '0';
 
 	while (i <= '9')
 	{
