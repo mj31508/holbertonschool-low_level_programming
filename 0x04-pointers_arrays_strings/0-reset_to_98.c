@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * reset_to_98 - prototye to update the n parameter to 98.
