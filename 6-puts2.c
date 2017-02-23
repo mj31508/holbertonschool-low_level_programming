@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * main - check the code for Holberton School students.
  *
@@ -10,15 +9,15 @@
 void puts2(char *str)
 {
 	int i = 0;
+	char s;
 
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-
-		if (i % 2 == 0)
+		if ( i %  2 == 0)
 		{
-			_putchar(str[i]);
+			_putchar(i);
 		}
 		i++;
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
