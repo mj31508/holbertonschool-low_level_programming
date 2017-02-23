@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * strncat - holds two pointers and a n variable.
+ * _strncat - holds two pointers and a n variable.
  *@dest: character pointer
  *@src: source pointer
  *@n: n variable to itereate with src
