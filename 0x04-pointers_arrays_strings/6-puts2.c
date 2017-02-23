@@ -2,8 +2,8 @@
 
 
 /**
- * main - check the code for Holberton School students.
- *
+ * puts2 - print every other character of a string.
+ *@str: string pointer
  * Return: Always 0.
  */
 
@@ -19,6 +19,7 @@ void puts2(char *str)
 			_putchar(str[i]);
 		}
 		i++;
-		_putchar('\n');
+
 	}
+	_putchar('\n');
 }
