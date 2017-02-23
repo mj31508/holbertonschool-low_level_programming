@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * rev_string - function prototype that holds a pointer
  *@s: variable pointer that holds the string
