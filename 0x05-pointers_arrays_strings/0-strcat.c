@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * strcat - function prototype holding two pointers
+ * _strcat - function prototype holding two pointers
  *@dest: destination pointer
  *@src: source pointer
  * Return: Always 0.
@@ -12,7 +12,7 @@ char *_strcat(char *dest, char *src)
 	int i = 0;
 	int j = 0;
 
-	while (dest[i] !='\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
@@ -25,5 +25,5 @@ char *_strcat(char *dest, char *src)
 
 	}
 	dest[i] = '\0';
-	return(dest);
+	return (dest);
 }
