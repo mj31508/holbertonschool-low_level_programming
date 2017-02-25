@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  *cap_string - A function prototype that capitalizes
  *@m: A variable holder
@@ -10,7 +11,7 @@ char *cap_string(char *m)
 {
 	int j = 0;
 
-	while (m[i] != '\0')
+	while (m[j] != '\0')
 	{
 		if (m[j] >= 'a' && m[j] <= 'z')
 		{
