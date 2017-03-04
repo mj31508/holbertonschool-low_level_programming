@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - funtion to hold argument vector
+ * main - function to hold argument vector
  * @argc: argument count not being used
  * @argv: argument vector for the string
  * Return: none
