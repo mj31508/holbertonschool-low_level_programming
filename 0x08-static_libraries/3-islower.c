@@ -1,22 +1,12 @@
-#include "holberton.h"
-
 /**
- * _islower - prototype that holds a int as a parameter.
- *@c: int
- * Return: Always 0.
+ * _islower - check for lower case
+ * @c: c variable
+ *
+ * Return: 0 if arg is not lowercase
  */
-
-
 int _islower(int c)
 {
-
-	if (c >= 'a' && c <= 'z')
-	{
+	if (c >= 97 && c <= 122)
 		return (1);
-
-		}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
