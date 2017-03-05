@@ -1,6 +1,4 @@
-#include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - function to hold argument vector
