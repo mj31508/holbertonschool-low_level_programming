@@ -1,54 +1,52 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-
-/**
- * _strdup - returns a pointer to a new string
- * @str: character pointer that will be used to check
- * Return: Always 0.
- */
-
 /**
  * _strlen - return the length of a string
- *
  * @s: string whose length to return
  *
  * Return: length of @s
  */
 int _strlen(char *s)
 {
-int n, m = 0;
+	int n, m = 0;
 
-while (*(s + m) != '\0')
-{
-++n;
-m++;
+	while (*(s + m) != '\0')
+	{
+		++n;
+		m++;
+	}
+	return (n);
 }
-return (n);
-}
+
+/**
+ * _strdup - returns a pointer to a new string
+ * @str: character pointer that will be ued to check
+ * Return: Always 0.
+ **/
 
 char *_strdup(char *str)
 {
 
-char *s;
-int i;
-int len;
+	char *s;
+	int i;
+	int len;
 
 	if (str == NULL)
 	{
 		return (NULL);
 
-}
-len = _strlen(str) + 1;
-		   s = malloc(sizeof(char) * len);
+	}
+	len = _strlen(str) + 1;
+	s = malloc(sizeof(char) * len);
 
-if (s == NULL)
-{
-free(s);
-return (NULL);
-}
-i = 0;
-        while (i < len)
+	if (s == NULL)
+	{
+		free(s);
+		return (NULL);
+	}
+	i = 0;
+	while (i < len)
 	{
 		s[i] = str[i];
 		i++;
