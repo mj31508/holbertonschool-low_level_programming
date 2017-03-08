@@ -1,23 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-/**
- * _strlen - return the length of a string
- * @s: string whose length to return
- *
- * Return: length of @s
- */
-int _strlen(char *s)
-{
-	int n, m = 0;
-
-	while (*(s + m) != '\0')
-	{
-		++n;
-		m++;
-	}
-	return (n);
-}
 
 /**
  * _strdup - returns a pointer to a new string
@@ -53,4 +36,23 @@ char *_strdup(char *str)
 	}
 	s[i] = '\0';
 	return (s);
+}
+
+/**
+ * _strlen - return the length of a string
+ * @s: string whose length to return
+ *
+ * Return: length of @s
+ */
+int _strlen(char *s)
+{
+	int n = 0;
+	int m = 0;
+
+	while (*(s + m) != '\0')
+	{
+		++n;
+		m++;
+	}
+	return (n);
 }
