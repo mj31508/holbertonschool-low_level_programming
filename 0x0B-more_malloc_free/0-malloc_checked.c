@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * malloc_checked - function prototype that holds a unsigned int of b
+ * @b: variable that will be malloc
+ * Return: Always pointer.
  */
 
 void *malloc_checked(unsigned int b)
@@ -15,7 +15,7 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == '\0')
 	{
-		exit (98);
+		exit(98);
 	}
 	return (ptr);
 }
