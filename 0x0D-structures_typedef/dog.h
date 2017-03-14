@@ -1,19 +1,19 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-int _putchar(char c);
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - a structure defined by the name dog
- * @type: access argument
+ * @name: access argument
  * @age: access argument
  * @owner: access argument
  **/
 
 typedef struct dog
 {
-	char *type;
+	char *name;
 	float age;
 	char *owner;
 }
-
+dog;
+int _putchar(char c);
 #endif
