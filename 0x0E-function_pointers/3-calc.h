@@ -2,7 +2,7 @@
 #define _3_CALC_H
 
 /**
- *
+ * struct op - stucture holding different different data types
  * @op: The operator
  * @f: The function associated
  */
