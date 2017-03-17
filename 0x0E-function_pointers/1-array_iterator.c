@@ -1,24 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #include "function_pointers.h"
 
 /**
  * array_iterator - function prototype that holds a function pointer
  * @array: array to be iterated
  * @size: comparison with loop
- *
+ * @action: Function pointer that points to a function
  *
  * Return: Void
  **/
