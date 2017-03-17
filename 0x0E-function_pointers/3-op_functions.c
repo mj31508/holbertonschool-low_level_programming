@@ -1,4 +1,5 @@
-#include "_3_CALC_H"
+#include "3-calc.h"
+#include <stdlib.h>
 
 /**
  * op_add - function to add to integers
