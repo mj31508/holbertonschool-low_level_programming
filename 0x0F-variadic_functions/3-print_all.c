@@ -31,12 +31,13 @@ void print_int(va_list ap)
  * Return: void
  **/
 void print_string(va_list ap)
-		  {
-			  char *pstring;
-			  pstring = (va_arg(ap, char*));
+{
+	char *pstring;
 
-			  printf("%s", pstring);
-		  }
+	pstring = (va_arg(ap, char*));
+
+	printf("%s", pstring);
+}
 
 
 
