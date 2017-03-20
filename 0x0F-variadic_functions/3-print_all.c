@@ -34,12 +34,11 @@ void print_string(va_list ap)
 {
 	char *pstring;
 
+	pstring = (va_arg(ap, char*));
 	if (string == NULL)
 	{
 		printf("(nil)");
 	}
-
-	pstring = (va_arg(ap, char*));
 
 	printf("%s", pstring);
 }
