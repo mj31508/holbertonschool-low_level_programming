@@ -19,15 +19,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 
+	char *p;
+
 	va_list ap;
 
 	va_start(ap, n);
 
+
 	for (i = 0; i < n; i++)
 	{
-		if (va_arg(ap, char *) != NULL)
+		p = va_arg(ap, char *);
+		if (p != NULL)
 		{
-			printf("%s", va_arg(ap, char *));
+			printf("%s", p);
 
 		}
 		else
