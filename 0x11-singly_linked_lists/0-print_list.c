@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * print_list -  function prototype of size_t that holds a head pointer
@@ -13,9 +14,8 @@
 
 size_t print_list(const list_t *h)
 {
-	const struct list_s *temp;
-	unsigned int i;
-	i = 0;
+	const list_t *temp;
+	unsigned int i = 0;
 	temp = h;
 
 	while (temp != NULL)
@@ -24,5 +24,5 @@ size_t print_list(const list_t *h)
 		temp = temp->next;
 		i++;
 	}
-	return(temp);
+	return(i);
 }
