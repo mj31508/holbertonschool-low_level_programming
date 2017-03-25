@@ -3,35 +3,33 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * add_node - function prototype that returns a list t
+ * @head: double pointer
+ * @str: pointer
+ *
+ * Return: head pointer
+ **/
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
-	list_t *new_node;
-
-	new_node = malloc(sizeof(list_t));
-
-	if (head == NULL)
-		return (NULL);
-
-	new_node->str = strdup(str);
-	new_node->len = _strlen(str);
-	if (*head == NULL)
-	{
-		*head = new_node;
-		new_node -> next = NULL;
-	}
-	return (*head);
+	unsigned int i;
 
 	temp = malloc(sizeof(list_t));
+
 	if (temp == NULL)
 		return (NULL);
-	temp = *head;
-	while(temp->next != NULL)
-	{
 
-		tep->next;
-		temp = temp->next;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
 	}
-	temp->next = new_node;
-	new_node->next = NULL;
+
+	temp->len = i;
+	temp->str = strdup(str);
+	temp->next = *head;
+	*head = temp;
+	return (*head);
 }
