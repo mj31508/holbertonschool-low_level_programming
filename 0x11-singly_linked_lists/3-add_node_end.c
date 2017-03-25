@@ -2,6 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/**
+ * add_node_end - function that has a list_t retunr
+ * @head: double pointer
+ * @str: pointer
+ *
+ * Return: head
+ **/
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
