@@ -1,0 +1,15 @@
+#include "list.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int pop_listint(listint_t **head)
+{
+	int n;
+	listint_t temp_node;
+
+	if (*head == NULL)
+		return (0);
+	temp = head->n;
+	temp = temp->next;
+	return (n);
+}

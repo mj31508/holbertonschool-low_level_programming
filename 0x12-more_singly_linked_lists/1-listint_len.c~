@@ -1,13 +1,5 @@
 #include "lists.h"
 
-/**
- * listint_len - function prototype that holds a listint_t pointer
- * @h: pointer to struct
- *
- *
- * Return: size_t
- **/
-
 size_t listint_len(const listint_t *h)
 {
 

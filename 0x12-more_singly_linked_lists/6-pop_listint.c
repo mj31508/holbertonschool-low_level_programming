@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * pop_listint(function that holds a double pointer)
+ * pop_listint-(function that holds a double pointer)
  *@head: double pointer to a struc and a pointer
  *
- *
+ * Return: value
  **/
 
 int pop_listint(listint_t **head)
@@ -19,7 +19,7 @@ int pop_listint(listint_t **head)
 		return (0);
 	temp = *head;
 	value = temp->n;
-	*head=temp->next;
+	*head = temp->next;
 	free(temp);
 	return (value);
 }

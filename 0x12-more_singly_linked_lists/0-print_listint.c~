@@ -3,14 +3,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/**
- * print_listint - function that holds a listint_t pointer
- * @h: head pointer for struct
- *
- *
- * Return: size_t
- **/
-
 
 size_t print_listint(const listint_t *h)
 {
