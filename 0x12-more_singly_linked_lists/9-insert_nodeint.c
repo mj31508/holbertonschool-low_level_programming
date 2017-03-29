@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * insert_nodeint_at_index - function protype that holds double head pointer and two int
@@ -24,13 +25,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	count = 0;
 	while (count != idx - 1)
 	{
+		if (mv_node->next == NULL)
+			break;
 		mv_node = mv_node->next;
 		count++;
 	}
-
+	if (idx == 0)
+	{
+		new_node = malloc(sizeof(listint_t));
+		new_node->n = n;
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+	if (idx - 1 > count)
+		return (NULL);
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
 		return (NULL);
+
 	new_node->n = n;
 	new_node->next = mv_node->next;
 	mv_node->next = new_node;
