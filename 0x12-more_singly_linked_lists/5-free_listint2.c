@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * free_listint2 - funtion that holds a double pointer
+ * free_listint2 - function that holds a double pointer
  * @head: double pointer to a struct
  *
  *
@@ -17,7 +17,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-	while (*head)
+	while (*head != NULL)
 	{
 		temp = *head;
 		*head = temp->next;
