@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * insert_nodeint_at_index - function protype that holds double head pointer and two int
+ * insert_nodeint_at_index - function protype that holds double ptr
  * @head: Double pointer that points to struct and head
  * @n: variable that will be used in new node
  * @idx: index that is inserted into new node
