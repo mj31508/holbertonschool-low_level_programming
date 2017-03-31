@@ -3,10 +3,10 @@
 
 /**
  * set_bit - function prototype that holds two variables
- * @n: unsigned long 
+ * @n: unsigned long
  * @index: unsigned int
  *
- * Return 1 if true -1 if false
+ * Return: 1 or -1
  **/
 
 int set_bit(unsigned long int *n, unsigned int index)
