@@ -6,6 +6,14 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+/**
+ * read_textfile - function to read from a file
+ * @filename: character pointer for the file name
+ * @letters: variable of size t that wll be mltiplied char
+ *
+ * Return: the amout of letters or -1 on failure
+ **/
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *print_this;
