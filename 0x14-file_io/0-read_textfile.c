@@ -22,22 +22,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t w_result;
 	ssize_t c_close;
 
-	print_this = malloc(sizeof(char) * letters);
+	letters = letters + 1;
 
-	if (print_this == '\0')
-		return ('\0');
+	if (filename == NULL)
+		return (0);
+
+	print_this = malloc(sizeof(char) * letters);
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		return (-1);
+		return (0);
 	r_result = read(fd, print_this, letters);
 	if (r_result == -1)
 		return (-1);
 	w_result = write(STDOUT_FILENO, print_this, r_result);
 
-	c_close = close(fd);
+	if (w_result == -1)
+		return (-1);
 
-	if (w_result == -1 || c_close == -1)
+	c_close = close(fd);
+	if (c_close == -1)
 		return (-1);
 	return (r_result);
 
