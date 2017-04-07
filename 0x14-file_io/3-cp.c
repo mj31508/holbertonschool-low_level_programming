@@ -20,21 +20,20 @@ int main(int argc, char **argv)
 	open_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (open_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
-			 argv[2]), exit(99);
+			argv[2]), exit(99);
 	fd_read = read(open_from, Buffer, BUFF_SIZE);
 	if (fd_read == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			 argv[1]), exit(98);
+			argv[1]), exit(98);
 	while (fd_read > 0)
 	{
 		fd_write = write(open_to, Buffer, fd_read);
 		if (fd_write == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				argv[2]), exit(99);
-			fd_read = read(open_from, Buffer, BUFF_SIZE);
+		fd_read = read(open_from, Buffer, BUFF_SIZE);
 			if (fd_read == -1)
-				dprintf(STDERR_FILENO, "Error: Can't read from file
- s\n", argv[1]), exit(98);
+				dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]), exit(98);
 	}
 	close_from = close(open_from);
 	if (close_from == -1)
