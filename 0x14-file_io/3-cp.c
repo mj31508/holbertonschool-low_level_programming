@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 /**
  * main - main int function
  * @argc: argument count
