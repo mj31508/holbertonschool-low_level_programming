@@ -51,11 +51,9 @@ int main(int argc, char **argv)
 	if (close_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_open);
 	exit (100);
-	return (-1);
 	close_to = close(open_to);
 	if (close_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_open);
 	exit (100);
-	return (-1);
 	return (0);
 }
