@@ -28,12 +28,12 @@ int main(int argc, char **argv)
 	while (fd_read > 0)
 	{
 		fd_write = write(open_to, Buffer, fd_read);
-			if (fd_write == -1)
+		if (fd_write == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				argv[2]), exit(99);
 			fd_read = read(open_from, Buffer, BUFF_SIZE);
-		if (fd_read == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file
+			if (fd_read == -1)
+				dprintf(STDERR_FILENO, "Error: Can't read from file
  s\n", argv[1]), exit(98);
 	}
 	close_from = close(open_from);
