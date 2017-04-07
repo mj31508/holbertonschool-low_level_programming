@@ -3,7 +3,7 @@
  * main - main int function
  * @argc: argument count
  * @argv: argument vector array
- * Return: -1 1 on failure
+ * Return: -1 on failure
  **/
 int main(int argc, char **argv)
 {
@@ -38,16 +38,15 @@ int main(int argc, char **argv)
 
 		fd_read = read(open_from, Buffer, BUFF_SIZE);
 		if (fd_read == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file
-%s\n", argv[1]), exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	}
 	close_from = close(open_from);
 	if (close_from == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_open);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", open_from);
 	exit (100);
 	close_to = close(open_to);
 	if (close_to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_open);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", open_from);
 	exit (100);
 	return (0);
 }
