@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 #include <unistd.h>
+#define BUFF_SIZE 1204
 
 ssize_t read_textfile(const char *filename, size_t letters);
 int _putchar(char c);
