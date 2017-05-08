@@ -1,0 +1,23 @@
+#include "lists.h"
+
+/**
+ * print_dlistint_t - function that hold a pointer to struct
+ * @h: head pointer
+ * @dlistint_t: structure
+ * Return: Return the number of nodes
+ **/
+
+size_t print_dlistint(const dlistint_t *h)
+{
+	const dlistint_t *move; //variable of the same type
+	unsigned int i = 0; //i is my counter
+	move = h; //asigining the move variable to the head
+
+	while (move != NULL) // while it is not null
+	{
+		printf("%d\n", move->n); //print the number of each node
+		move = move->next; //reassign move vriable to move to next node
+		i++; //count element
+	}
+	return (i); //return total number of elements
+}
