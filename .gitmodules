@@ -1,0 +1,3 @@
+[submodule "monty/monty"]
+	path = monty/monty
+	url = https://github.com/mj31508/holbertonschool-low_level_programming
