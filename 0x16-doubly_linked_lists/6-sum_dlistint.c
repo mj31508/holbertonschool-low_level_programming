@@ -9,11 +9,9 @@
 
 int sum_dlistint(dlistint_t *head)
 {
-	unsigned int total;
-	dlistint_t *temp;
+	unsigned int total = 0;
+	dlistint_t *temp = head;
 
-	total = 0;
-	temp = head;
 
 	if (head == NULL)
 	{
