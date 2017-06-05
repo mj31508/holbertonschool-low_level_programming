@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_dhb2 - holds a str pointer to struct
+ * hash_djb2 - holds a str pointer to struct
  * @str: pointer
  *
  * Return: unsigned long int
