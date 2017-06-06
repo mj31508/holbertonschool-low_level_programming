@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_table_set - pointer to hash table
- * @ht: pointer
+ * @ht: hash table
  * @key: pointer to const char
  * @value: pointer to cont char
  * Return: int
@@ -10,11 +10,14 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 
-	hash_node_t  *new_node;
+	hash_node_t  *new_node, *tmp;
 	unsigned long int index;
 
+	if (strlen(value) == 0)
+		return NULL;
+
 	if (ht == NULL || key == NULL || value == NULL)
-		(return 0);
+		return (0);
 
 	new_node = malloc(sizeof(hash_node_t));
 
@@ -32,9 +35,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (new_node->key == NULL || new_node->value == NULL)
 	{
-		(return 0);
+		return (0);
 	}
 
+
 	ht->array[index] = new_node;
-	(return 1);
+
+	if (ht->array[index] == NULL)
+	{
+		ht->array[index] = new_node;
+	}
+
+	tmp = ht->array[index];
+	while (tmp != NULL)
+		if (strcmp(key, tmp->key) == 0)
+		{
+			free(tmp->value);
+		        tmp->value=strdup(value);
+			return (1);
+		}
+	ht->array = new_node;
+
+	return (1);
 }
