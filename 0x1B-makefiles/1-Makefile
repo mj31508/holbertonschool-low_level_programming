@@ -1,0 +1,9 @@
+#second make file using variables
+
+#compiler thats used
+CC = gcc
+#source files
+SRC = holberton.c main.c
+
+all: main.c m.h holberton.c
+	$(CC) $(SRC) -o holberton
