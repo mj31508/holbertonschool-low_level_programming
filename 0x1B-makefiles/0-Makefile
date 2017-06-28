@@ -1,0 +1,3 @@
+#first make file
+all: main.c m.h holberton.c
+	gcc main.c m.h holberton.c -o holberton
