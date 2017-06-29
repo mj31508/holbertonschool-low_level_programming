@@ -1,0 +1,17 @@
+#Useful make file with various variables
+
+#compiler to be used
+CC = gcc
+
+#Source files
+SRC = holberton.c main.c
+
+#.O files
+OBJ = $(SRC:.c=.o)
+
+#Name of executable
+NAME = holberton
+
+
+all: $(SRC)
+	$(CC) $(SRC) -o $(NAME)
