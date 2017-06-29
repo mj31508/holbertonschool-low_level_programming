@@ -1,0 +1,30 @@
+#Makefile number 3
+
+#compiler to be used
+CC = gcc
+
+#.c Source files
+SRC = holberton.c main.c
+
+#OBJ Source files
+OBJ = $(SRC:.c = .o)
+
+#Name of executable
+NAME = holberton
+
+RM = rm
+
+#do not recompile if obj is not changed
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+.PHONY: clean oclean fclean
+
+clean:
+	$(RM) -f *~ $(NAME)
+oclean:
+	$(RM) -f $(OBJ)
+fclean:
+	clean oclean
+re:
+	oclean all
