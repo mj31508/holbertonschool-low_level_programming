@@ -22,15 +22,15 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	while (temp->left != NULL)
+	while (temp_1->left != NULL)
 	{
-		temp_1 = temp->left;
+		temp_1 = temp_1->left;
 		counter_1 += 1;
 	}
 
-	while (temp->right != NULL)
+	while (temp_2->right != NULL)
 	{
-		temp_2 = temp->left;
+		temp_2 = temp_2->left;
 		counter_2++;
 	}
 	return (counter_1 - counter_2);
