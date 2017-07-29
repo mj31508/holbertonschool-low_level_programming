@@ -2,7 +2,7 @@
 #include "14-binary_tree_balance.c"
 
 /**
- * binary_tree_is_perfct - checks for perfect tree
+ * binary_tree_is_perfect - checks for perfect tree
  * @tree: pointer to tree
  * Return: 1 is perfect
  **/
