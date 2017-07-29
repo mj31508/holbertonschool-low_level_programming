@@ -3,8 +3,8 @@
 
 /**
  * binary_tree_node - creation of a binary tree node
- * parent: pointer to root
- * value: the value position
+ * @parent: pointer to root
+ * @value: the value position
  * Return: NULL if node is empty else return new node
  **/
 
