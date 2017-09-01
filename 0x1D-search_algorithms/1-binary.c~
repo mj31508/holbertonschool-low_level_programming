@@ -1,0 +1,61 @@
+#include "search_algos.h"
+
+/**
+ * binary_search - value search
+ * @array: first element pointer
+ * @size: n of elements in the array
+ * @value: value search
+ * Return: value or -1
+ ***/
+int binary_search(int *array, size_t size, int value)
+{
+	size_t left;
+	size_t middle;
+	size_t right;
+
+	left = 0;
+	right = size - 1;
+
+	p_array(array, left, size);
+	while (left < right)
+	{
+		middle = (left + right) / 2;
+		if (array[middle] < value)
+		{
+			left = middle + 1;
+			p_array(array, left, size);
+		}
+		else if (array[middle] > value)
+		{
+			right = middle;
+			p_array(array, left, right + 1);
+		}
+		else
+			return (middle);
+	}
+
+	return (-1);
+}
+
+/**
+ * print_array - array int print
+ * @array: printed array
+ * @position: index position
+ * @size: n of elements at array
+ */
+void print_array(int *array, size_t position, size_t size)
+{
+	size_t i;
+
+	printf("Searching in array: ");
+
+	i = position;
+	while (array && i < size)
+	{
+		if (i > position)
+			printf(", ");
+		printf("%d", array[i]);
+		++i;
+	}
+	printf("\n");
+}
